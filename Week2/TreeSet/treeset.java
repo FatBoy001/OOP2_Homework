@@ -10,6 +10,7 @@ public class treeset {
         TreeSet ts = new TreeSet<Integer>();
         SecureRandom random = new SecureRandom();
         int counter = 0;
+        System.out.println("電腦從 1～100的整數中，亂數取出10個不重複的號碼....");
 
         while(ts.size()<SIZE_OF_NUMBER){
             int randomNumber = random.nextInt(ONE_HUNDRED);
