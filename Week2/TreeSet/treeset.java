@@ -10,7 +10,7 @@ public class treeset {
         TreeSet ts = new TreeSet<Integer>();
         SecureRandom random = new SecureRandom();
         int counter = 0;
-        System.out.println("電腦從 1～100的整數中，亂數取出10個不重複的號碼....");
+        System.out.println("電腦從 1~100 的整數中，亂數取出10個不重複的號碼....");
 
         while(ts.size()<SIZE_OF_NUMBER){
             int randomNumber = random.nextInt(ONE_HUNDRED);
@@ -31,6 +31,6 @@ public class treeset {
             if(RANGE_MIN>value||value>RANGE_MAX)
                 iterator.remove();
         }
-        System.out.printf("內容介於%d～%d者：%s%n",RANGE_MIN,RANGE_MAX,ts); 
+        System.out.printf("內容介於 %d～%d 者：%s%n",RANGE_MIN,RANGE_MAX,ts); 
     }
 }
