@@ -12,19 +12,19 @@ public class treeset {
         int counter = 0;
 
         while(ts.size()<SIZE_OF_NUMBER){
-            ts.add(random.nextInt(ONE_HUNDRED));
+            int randomNumber = random.nextInt(ONE_HUNDRED);
+            if(ts.add(randomNumber)){
+                counter++;
+                System.out.printf("第%d個號碼：%s%n",counter,randomNumber);
+            }
+            
         }
         Iterator iterator = ts.iterator();
-        while(iterator.hasNext()){
-            counter++;
-            System.out.printf("第%d個號碼：%s%n",counter,iterator.next());
-        }
         System.out.printf("物件內元素個數為：%d%n",ts.size());
         System.out.printf("物件內元素的內容：%s%n",ts.toString());
         System.out.printf("第一個元素內容為：%s%n",ts.first());
         System.out.printf("最後一個元素內容：%s%n",ts.last()); 
-        
-        iterator = ts.iterator();
+
         while(iterator.hasNext()){
             int value = Integer.parseInt(iterator.next().toString());
             if(RANGE_MIN>value||value>RANGE_MAX)
