@@ -4,16 +4,19 @@ import java.util.Iterator;
 public class treeset {
     static int ONE_HUNDRED = 100;
     static int SIZE_OF_NUMBER = 10;
+    static int BOUND_MIN = 1;
+    static int BOUND_MAX = 100;
+
     static int RANGE_MAX = 70;
-    static int RANGE_MIN = 30;
+    static int RANGE_MIN = 30; 
     public static void main(String[] args) {
         TreeSet ts = new TreeSet<Integer>();
         SecureRandom random = new SecureRandom();
         int counter = 0;
-        System.out.println("電腦從 1~100 的整數中，亂數取出10個不重複的號碼....");
+        System.out.printf("電腦從 %d~%d 的整數中，亂數取出 %d 個不重複的號碼....%n",BOUND_MIN,BOUND_MAX,SIZE_OF_NUMBER);
 
         while(ts.size()<SIZE_OF_NUMBER){
-            int randomNumber = random.nextInt(ONE_HUNDRED);
+            int randomNumber = random.nextInt(BOUND_MAX)+BOUND_MIN;
             if(ts.add(randomNumber)){
                 counter++;
                 System.out.printf("第%d個號碼：%s%n",counter,randomNumber);
